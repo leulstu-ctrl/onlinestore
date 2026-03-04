@@ -40,20 +40,20 @@ export default function Product() {
         </div>
 
         <div className="mt-8 flex items-center space-x-4">
-          <div className="flex items-center border border-gray-300 rounded">
+          <div className="flex items-center border border-pink-300 rounded shadow-sm">
             <button
-              className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+              className="px-4 py-2 text-gray-600 hover:text-pink-700 hover:bg-pink-50"
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
             >-</button>
             <span className="px-4 py-2 text-gray-900 font-medium">{quantity}</span>
             <button
-              className="px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+              className="px-4 py-2 text-gray-600 hover:text-pink-700 hover:bg-pink-50"
               onClick={() => setQuantity(quantity + 1)}
             >+</button>
           </div>
           <button
             onClick={handleBuyNow}
-            className="flex-1 bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors"
+            className="flex-1 bg-pink-600 text-white rounded-md px-8 py-3 font-medium shadow hover:bg-pink-700 transition-colors"
           >
             Buy Now
           </button>

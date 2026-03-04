@@ -2,24 +2,25 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 
 export default function Home() {
-  const newArrivals = products.slice(0, 8);
+  // Since we only have two products now, display all of them
+  const newArrivals = products;
 
   return (
     <div className="bg-white">
-      <div className="relative bg-gray-900 h-[60vh] flex items-center justify-center">
+      <div className="relative bg-pink-100 h-[60vh] flex items-center justify-center border-b border-pink-200">
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ethiopian Elegance</h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">Authentic Habesha Kemis, jewelry, and cultural decor.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-pink-800 mb-4">Ultimate Beauty & Makeup</h1>
+          <p className="text-lg md:text-xl text-gray-700 mb-8">Full package makeup delivered across Ethiopia with zero delivery cost.</p>
           <div className="space-x-4">
-            <Link to="/category/traditional-womens" className="inline-block bg-white text-gray-900 px-6 py-3 font-medium hover:bg-gray-100 transition-colors">
-              Shop Traditional
-            </Link>
+            <a href="#shop" className="inline-block bg-pink-600 text-white rounded-md px-6 py-3 font-medium shadow hover:bg-pink-700 transition-colors">
+              Shop Now
+            </a>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold mb-8">New Arrivals</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-y-10 gap-x-6">
+      <div id="shop" className="max-w-7xl mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold mb-8 text-pink-800">Our Packages</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-12">
           {newArrivals.map((product) => (
             <Link key={product.id} to={`/product/${product.id}`} className="group relative">
               <div className="w-full bg-gray-200 h-80 relative overflow-hidden">
