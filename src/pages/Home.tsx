@@ -30,7 +30,7 @@ export default function Home() {
                   <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
                   <p className="mt-1 text-sm text-gray-500 capitalize">{product.categoryId}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">${product.price.toFixed(2)}</p>
+                <p className="text-sm font-medium text-gray-900">ETB {product.price.toFixed(2)}</p>
               </div>
             </Link>
           ))}

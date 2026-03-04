@@ -36,7 +36,7 @@ export default function Category() {
                   <div>
                     <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
                   </div>
-                  <p className="text-sm font-medium text-gray-900">${product.price.toFixed(2)}</p>
+                  <p className="text-sm font-medium text-gray-900">ETB {product.price.toFixed(2)}</p>
                 </div>
               </Link>
             ))}

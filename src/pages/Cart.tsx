@@ -33,7 +33,7 @@ export default function Cart() {
                   <div>
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <h3><Link to={`/product/${item.product.id}`}>{item.product.name}</Link></h3>
-                      <p className="ml-4">${(item.product.price * item.quantity).toFixed(2)}</p>
+                      <p className="ml-4">ETB {(item.product.price * item.quantity).toFixed(2)}</p>
                     </div>
                     <p className="mt-1 text-sm text-gray-500 capitalize">{item.product.categoryId}</p>
                   </div>
@@ -53,7 +53,7 @@ export default function Cart() {
             <h2 className="text-lg font-medium text-gray-900 mb-4">Order Summary</h2>
             <div className="flex justify-between text-base font-medium text-gray-900 mb-4">
               <p>Subtotal</p>
-              <p>${total.toFixed(2)}</p>
+              <p>ETB {total.toFixed(2)}</p>
             </div>
             <p className="mt-0.5 text-sm text-gray-500 mb-6">Shipping and taxes calculated at checkout.</p>
             <button

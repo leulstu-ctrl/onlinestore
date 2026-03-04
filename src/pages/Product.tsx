@@ -32,7 +32,7 @@ export default function Product() {
           <span className="text-gray-900">{product.name}</span>
         </nav>
         <h1 className="text-4xl font-bold text-gray-900">{product.name}</h1>
-        <p className="text-2xl mt-4 text-gray-900">${product.price.toFixed(2)}</p>
+        <p className="text-2xl mt-4 text-gray-900">ETB {product.price.toFixed(2)}</p>
         <div className="mt-6 border-t border-gray-200 pt-6">
           <h3 className="text-sm font-medium text-gray-900">Description</h3>
           <div className="mt-4 prose prose-sm text-gray-500">

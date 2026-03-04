@@ -92,7 +92,7 @@ export default function Checkout() {
           <form onSubmit={handlePaymentSubmit} className="space-y-6">
             <h2 className="text-xl font-bold">Payment via Ebirr</h2>
             <div className="bg-blue-50 text-blue-800 p-4 rounded text-sm mb-6">
-              Please transfer exactly <strong>${total.toFixed(2)}</strong> to complete your order.
+              Please transfer exactly <strong>ETB {total.toFixed(2)}</strong> to complete your order.
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Ebirr Phone Number</label>
