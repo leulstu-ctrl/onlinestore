@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { products } from '../data/products';
 import { useCart } from '../context/CartContext';
 
@@ -8,16 +8,15 @@ export default function Product() {
   const product = products.find(p => p.id === id);
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
-  const [added, setAdded] = useState(false);
+  const navigate = useNavigate();
 
   if (!product) {
     return <div className="p-16 text-center text-2xl font-bold">Product not found</div>;
   }
 
-  const handleAddToCart = () => {
+  const handleBuyNow = () => {
     addToCart(product, quantity);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+    navigate('/checkout');
   };
 
   return (
@@ -53,11 +52,10 @@ export default function Product() {
             >+</button>
           </div>
           <button
-            onClick={handleAddToCart}
-            className="flex-1 bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors disabled:opacity-50"
-            disabled={added}
+            onClick={handleBuyNow}
+            className="flex-1 bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors"
           >
-            {added ? 'Added to Cart ✓' : 'Add to Cart'}
+            Buy Now
           </button>
         </div>
       </div>
