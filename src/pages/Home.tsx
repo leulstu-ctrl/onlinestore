@@ -8,11 +8,11 @@ export default function Home() {
     <div className="bg-white">
       <div className="relative bg-gray-900 h-[60vh] flex items-center justify-center">
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Minimalist Elegance</h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-8">Curated fashion, jewelry, and smart home decor.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ethiopian Elegance</h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8">Authentic Habesha Kemis, jewelry, and cultural decor.</p>
           <div className="space-x-4">
-            <Link to="/category/womens" className="inline-block bg-white text-gray-900 px-6 py-3 font-medium hover:bg-gray-100 transition-colors">
-              Shop Women
+            <Link to="/category/traditional-womens" className="inline-block bg-white text-gray-900 px-6 py-3 font-medium hover:bg-gray-100 transition-colors">
+              Shop Traditional
             </Link>
           </div>
         </div>

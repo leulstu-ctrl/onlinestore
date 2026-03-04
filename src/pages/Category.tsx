@@ -3,10 +3,10 @@ import { products } from '../data/products';
 import type { Category as CategoryType } from '../data/products';
 
 const categoryMap: Record<string, string> = {
-  'womens': "Women's Clothing",
-  'mens': "Men's Clothing",
-  'jewelry': "Jewelry",
-  'home': "Smart Home Decor"
+  'traditional-womens': "Habesha Kemis & Women's Wear",
+  'traditional-mens': "Traditional Men's Wear",
+  'ethiopian-jewelry': "Ethiopian Jewelry",
+  'home': "Cultural Home Decor"
 };
 
 export default function Category() {

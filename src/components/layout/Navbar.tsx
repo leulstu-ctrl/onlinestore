@@ -14,9 +14,9 @@ export default function Navbar() {
           <Link to="/" className="text-xl font-bold">AESTHETICA</Link>
           <div className="hidden sm:flex sm:space-x-8">
             <Link to="/" className="text-sm font-medium">Home</Link>
-            <Link to="/category/womens" className="text-sm font-medium">Women</Link>
-            <Link to="/category/mens" className="text-sm font-medium">Men</Link>
-            <Link to="/category/jewelry" className="text-sm font-medium">Jewelry</Link>
+            <Link to="/category/traditional-womens" className="text-sm font-medium">Women</Link>
+            <Link to="/category/traditional-mens" className="text-sm font-medium">Men</Link>
+            <Link to="/category/ethiopian-jewelry" className="text-sm font-medium">Jewelry</Link>
             <Link to="/category/home" className="text-sm font-medium">Home Decor</Link>
           </div>
           <div className="flex items-center space-x-4">
