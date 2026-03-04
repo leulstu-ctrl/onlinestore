@@ -2,8 +2,16 @@ import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import Image from "next/image"
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
-  const products = await prisma.product.findMany({ take: 8, include: { category: true } })
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let products: any[] = []
+  try {
+    products = await prisma.product.findMany({ take: 8, include: { category: true } })
+  } catch (error) {
+    console.error("Failed to fetch products:", error)
+  }
 
   return (
     <div className="bg-white">

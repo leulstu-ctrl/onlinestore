@@ -3,12 +3,20 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
+export const dynamic = 'force-dynamic';
+
 export default async function CategoryPage({ params }: { params: { id: string } }) {
   const categoryMap: Record<string, string> = { 'womens': "Women's Clothing", 'mens': "Men's Clothing", 'jewelry': "Jewelry", 'home': "Smart Home Decor" }
   const categoryName = categoryMap[params.id]
   if (!categoryName) notFound()
 
-  const category = await prisma.category.findUnique({ where: { name: categoryName }, include: { products: true, } })
+  let category = null;
+  try {
+    category = await prisma.category.findUnique({ where: { name: categoryName }, include: { products: true, } })
+  } catch (error) {
+    console.error("Failed to fetch category:", error)
+  }
+
   if (!category) notFound()
 
   return (

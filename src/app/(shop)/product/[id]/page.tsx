@@ -2,8 +2,16 @@ import { prisma } from "@/lib/prisma"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import AddToCartButton from "./AddToCartButton"
+export const dynamic = 'force-dynamic';
+
 export default async function ProductPage({ params }: { params: { id: string } }) {
-  const product = await prisma.product.findUnique({ where: { id: params.id }, include: { category: true } })
+  let product = null;
+  try {
+    product = await prisma.product.findUnique({ where: { id: params.id }, include: { category: true } })
+  } catch (error) {
+    console.error("Failed to fetch product:", error)
+  }
+
   if (!product) notFound()
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-2 gap-8">
