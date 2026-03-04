@@ -13,6 +13,8 @@ export default function Navbar() {
             <Link href="/" className="text-sm font-medium">Home</Link>
             <Link href="/category/womens" className="text-sm font-medium">Women</Link>
             <Link href="/category/mens" className="text-sm font-medium">Men</Link>
+            <Link href="/category/jewelry" className="text-sm font-medium">Jewelry</Link>
+            <Link href="/category/home" className="text-sm font-medium">Home Decor</Link>
           </div>
           <div className="flex items-center space-x-4">
             {session ? (
