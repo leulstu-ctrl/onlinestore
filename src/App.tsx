@@ -6,6 +6,7 @@ import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Checkout from './pages/Checkout';
+import Contact from './pages/Contact';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/contact" element={<Contact />} />
               </Routes>
             </main>
             <footer className="bg-white border-t border-gray-200 mt-12">

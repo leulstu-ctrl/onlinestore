@@ -11,13 +11,10 @@ export default function Navbar() {
     <nav className="border-b bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <Link to="/" className="text-xl font-bold">AESTHETICA</Link>
+          <Link to="/" className="text-xl font-bold text-pink-700">BEAUTY HUB</Link>
           <div className="hidden sm:flex sm:space-x-8">
-            <Link to="/" className="text-sm font-medium">Home</Link>
-            <Link to="/category/traditional-womens" className="text-sm font-medium">Women</Link>
-            <Link to="/category/traditional-mens" className="text-sm font-medium">Men</Link>
-            <Link to="/category/ethiopian-jewelry" className="text-sm font-medium">Jewelry</Link>
-            <Link to="/category/home" className="text-sm font-medium">Home Decor</Link>
+            <Link to="/" className="text-sm font-medium hover:text-pink-600 transition-colors">Home</Link>
+            <Link to="/contact" className="text-sm font-medium hover:text-pink-600 transition-colors">Contact Us</Link>
           </div>
           <div className="flex items-center space-x-4">
             {user ? (
